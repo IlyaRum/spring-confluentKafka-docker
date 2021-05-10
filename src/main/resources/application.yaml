@@ -1,0 +1,12 @@
+spring:
+  kafka:
+    bootstrap-servers: 192.168.99.102:9092
+    consumer:
+      group-id: my_group_id
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      max-poll-records: 1
+      client-id: example
+    listener:
+      ack-mode: manual_immediate
